@@ -1,0 +1,13 @@
+---
+
+- name: Install required python-pycurl package
+  hosts: docker
+  gather_facts: no
+  tasks:
+    - name: Install pycurl
+      apt: pkg=python-pycurl update_cache=yes cache_valid_time=600
+
+- name: Install Docker
+  hosts: docker
+  roles:
+    - angstwad.docker_ubuntu
