@@ -12,3 +12,10 @@
   sudo: yes
   roles:
     - angstwad.docker_ubuntu
+
+- name: Install docker-enter command line utility
+  hosts: docker
+  sudo: yes
+  tasks:
+    - name: Install docker-enter
+      command: docker run --rm -v /usr/local/bin:/target jpetazzo/nsenter

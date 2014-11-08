@@ -7,6 +7,10 @@ role.
 
 Tested with Ubuntu 14.04.
 
+Includes automated installation of
+[`nsenter`](https://github.com/jpetazzo/nsenter), which adds the `docker-enter`
+command for entering running containers without setting up an SSH server.
+
 ### Requirements
 
 - A local installation of Ansible +1.5
